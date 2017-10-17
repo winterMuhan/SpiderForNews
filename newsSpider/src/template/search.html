@@ -1,0 +1,41 @@
+$def with(datas,up,down)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Winter</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style>
+body {background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/hero.jpg) no-repeat center center fixed; background-size:cover;}
+.btn{font-family:'华文楷体';color:#CC9966;text-align:center;font-size:16px;width:180px;heigth:20px;margin:30px auto;border:1px;border-color:#171717;border-radius:20px;color:blue;text-decoration:none;}
+.btn:hover{background:gray;}
+.STYLE1 {text-align:center;margin-top:50px;font-family:'华文楷体'}
+.content{background:#C0C0C0;width:900px;height:600px auto;border:1px solid #CC9966;margin:50px auto;filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6 }
+.content li{list-style-type:none;font-size:28px;}
+.content li a{font-size:18px;font-family:"隶书";padding-top:10px;padding-left:50px;text-decoration:none;background:#C0C0C0}
+</style>
+<link href="D:/Eclipae with pydev/wokespace/newsSpider/src/static/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1 class="STYLE1">Winter--新闻网</h1>
+<div class="content" >
+<br>
+$for data in datas:
+	<li><a href="$:data[9]]">$:data[3]</a></li>
+</div>
+<br><br>
+<center><a href="/" class="btn">返    回</a></center>
+<center>
+$if up:
+	<a href="/page_$:(up).html" class="btn">上一页</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+	<a href="/page_1.html" class="btn">首  页</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+$if down:
+	<a href="/page_$:(down).html" class="btn">下一页</a>
+</center>
+</body>
+</html>
